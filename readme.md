@@ -4,7 +4,7 @@ This script searches subdirectories and then executes a git command if it is a g
 
 # git-pull.sh
 
-This script searches subdirectories and the executes "git pull" for eatch repositories.
+This script searches subdirectories and then executes "git pull" for eatch repositories.
 
 # git-pull.cmd
 
