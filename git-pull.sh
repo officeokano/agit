@@ -9,13 +9,10 @@ for filepath in $files; do
 done
 for i in ${dirary[@]}; do
   pushd $i > /dev/null
-  printf "checking directory: $i\n"
   if [ -e $git ]; then
-    printf "pull from remote\n"
+    printf "pull $i from remote\n"
     git pull
-  else
-    printf "$i is not a git repository\n"
+    printf "\n"
   fi
-  printf "\n"
   popd > /dev/null
 done
