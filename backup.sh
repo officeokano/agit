@@ -7,4 +7,6 @@ if [ -e ../gitbackup.tar.gz ]; then
     fi
     mv ../gitbackup.tar.gz ../oldgitbackup.tar.gz
 fi
-tar czfv ../gitbackup.tar.gz --exclude='.*' *
+printf "backup starting...\n"
+tar czf ../gitbackup.tar.gz --exclude='.*' *
+printf "done\n"
