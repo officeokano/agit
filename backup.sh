@@ -1,12 +1,16 @@
 #!/bin/bash
+cd `dirname $0`
+current=$(basename `pwd`)
 cd ..
-agit/agit.sh pull
-if [ -e ../gitbackup.tar.gz ]; then
-    if [ -e ../oldgitbackup.tar.gz ]; then
-        rm ../oldgitbackup.tar.gz
+$current/agit.sh pull
+current=$(basename `pwd`)
+cd ..
+if [ -e gitbackup.tar.gz ]; then
+    if [ -e oldgitbackup.tar.gz ]; then
+        rm oldgitbackup.tar.gz
     fi
-    mv ../gitbackup.tar.gz ../oldgitbackup.tar.gz
+    mv gitbackup.tar.gz oldgitbackup.tar.gz
 fi
 printf "backup starting...\n"
-tar czf ../gitbackup.tar.gz --exclude='.*' *
+tar czf gitbackup.tar.gz --exclude='.*' $current
 printf "done\n"
