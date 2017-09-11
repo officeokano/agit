@@ -11,6 +11,6 @@ if [ -e gitbackup.tar.gz ]; then
     fi
     mv gitbackup.tar.gz oldgitbackup.tar.gz
 fi
-printf "backup starting...\n"
+printf "starting backup...\n"
 tar czf gitbackup.tar.gz --exclude='.*' $current
 printf "done\n"
