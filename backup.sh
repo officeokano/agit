@@ -13,4 +13,5 @@ if [ -e gitbackup.tar.gz ]; then
 fi
 printf "starting backup...\n"
 tar czf gitbackup.tar.gz --exclude='.*' $current
+gpg -e -r h.okano@gmail.com -o gitbackup.tar.gz.pgp gitbackup.tar.gz
 printf "done\n"
