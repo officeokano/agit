@@ -1,4 +1,4 @@
-# agit.sh
+# agit
 
 This script searches subdirectories and then executes a git command if it is a git repository.
 
