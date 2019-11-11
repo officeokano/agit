@@ -5,7 +5,7 @@ if [ ! $1 = "-h" ] && [ ! $1 = "--help" ] && [ ! $1 = "" ] ; then
 		if [ -d $f ] ; then
 			pushd $f > /dev/null
 			if [ -e $git ] ; then
-				printf "$i: git $1\n"
+				printf "$f: git $1\n"
 				git $1 $2 $3 $4 $5 $6 $7 $8 $9
 				printf "\n"
 			fi
